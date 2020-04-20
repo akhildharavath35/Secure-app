@@ -1,0 +1,45 @@
+
+
+<div class="conatiner p-1"> 
+  
+  <br>
+  <div style="overflow-x:auto;">
+    <!--View data-->
+    <table class="table">
+
+      <thead>
+        <tr>
+          <th scope="col">Sno</th>
+          <th scope="col">Guard</th>
+          <th scope="col">Reason</th>
+          <th scope="col">Outingdate</th>
+          <th scope="col">Reindate</th>
+          <th scope="col">Outgoingtime</th>
+          <th scope="col">Reintime</th>
+          <th scope="col">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr *ngFor="let record of viewarray; let i = index">
+          <th scope="row">{{i+1}}</th>
+          <td>{{record.username}}</td>
+          <td>{{record.reason}}</td>
+          <td>{{record.outdate}}</td>
+          <td>{{record.reindate}}</td>
+          <td>{{record.outhrsandmins}}</td>
+          <td>{{record.reinhrsandmins}}</td>
+          <td [ngStyle]="{'color':record.status === 'Accepted' ? 'blue' : 'red'}">{{record.status}}</td>
+        </tr>
+      </tbody>
+    </table>
+ 
+  </div>
+
+  <div *ngIf ="error === true" class="container justify-content-center">
+    <h3 style="text-align: center; font-family: roboto; padding-top: 20px;">{{message1}}</h3>
+  </div>
+
+</div>
+
+

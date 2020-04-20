@@ -1,0 +1,56 @@
+<div class="conatiner p-1">
+    <!--Request form-->
+    <div class="form_main">
+      <!--
+        <div class="noti-messg"  style="text-align: center; background-color: lightblue; visibility: hidden;">
+            <span  id="myModal"><b> Request sent successfully</b></span>
+          </div>
+      -->
+        <h4 class="heading"><strong>Request </strong> Outpass <span></span></h4>
+        <div class="form">
+        <form ngNativeValidate #ref="ngForm" (ngSubmit)="onRequest(ref.value);">
+
+            <label class="pt-2" for="outdate"><strong>Out date</strong></label>
+            <input id="outdate" type="date" required="" placeholder="dd/mm/yyyy" value="" name="outdate" ngModel class="txt">
+
+            <label class="pt-2" for="hrsandmins"><strong>Hrs Mins(Time)</strong></label>
+            <input id="hrsandmins" type="time" required="" placeholder="--:--"  value="" name="outhrsandmins" ngModel class="txt">
+
+            <label class="pt-2" for="reindate"><strong>Re in date</strong></label>
+            <input id="reindate" type="date" required="" placeholder="dd/mm/yyyy"  value="" name="reindate" ngModel class="txt">
+
+            <label class="pt-2" for="hrsandmins"><strong>Hrs Mins(Time)</strong></label>
+            <input id="hrsandmins" type="time" required="" placeholder="--:--"  value="" name="reinhrsandmins" ngModel class="txt">
+
+            <label class="pt-2" for="reason"><strong>Reason</strong></label>
+            <select  class="form-control  selecttxt" id="reason" name="reason" ngModel  required >
+                <option value="">Choose--</option>
+                <option *ngFor="let r of reasons">{{r}}</option>
+              </select>
+            
+              <br>
+             <textarea placeholder="Enter Remarks" name="mess" type="text" class="txt_3"></textarea>
+             <input type="submit" value="submit" name="submit" class="txt2">
+
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+  <!--loading
+  <ngx-spinner
+  bdColor="rgba(51,51,51,0.8)"
+  size="medium"
+  color="#fff"
+  type="ball-scale-multiple"
+>
+  <p style="font-size: 20px; color: white">Loading...</p>
+</ngx-spinner>--> 
+
+
+  
+ 

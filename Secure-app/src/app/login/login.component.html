@@ -1,0 +1,35 @@
+<div class="sidenav">
+    <div class="login-main-text">
+       <div class="p-1">  
+         <img width="120px" src="../../assets/images/collegelogo.jfif">
+       </div>
+       <h2><i class="fa fa-strikethrough"></i>ecure </h2>
+       <h3 style="font-family: Lato, sans-serif;">Login Page</h3>
+       <p>Be the change you wish to see in the World.</p>
+    </div>
+ </div>
+ <div class="main">
+    <div class="col-md-6 col-sm-12">
+       
+       <div class="login-form">
+         <div class="noti-messg"  style="text-align: center; background-color: lightblue;">
+            <span *ngIf="loggedin === true"><b> You are successfully loggedin!</b></span>
+          </div>
+          <div class="noti-messg"  style="text-align: center; color: red;">
+            <span *ngIf="error === true"><p style="font-weight: 500;"> {{message1}}</p></span>
+          </div>
+          <br>
+          <form ngNativeValidate #ref="ngForm" (ngSubmit)="onLogin(ref.value)">
+             <div class="form-group">
+                <label ><h6 style="opacity: 0.9;">User Name</h6></label>
+                <input type="text" class="form-control" placeholder="User Name" name="username" ngModel  required>
+             </div>
+             <div class="form-group">
+                <label><h6 style="opacity: 0.9;">Password</h6></label>
+                <input type="password" class="form-control" placeholder="Password" name="password" ngModel  required>
+             </div>
+             <button style="float: right;" type="submit" class="btn btn-black" [disabled]="disable">Login</button>
+          </form>
+       </div>
+    </div>
+ </div>

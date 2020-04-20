@@ -1,0 +1,70 @@
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+<div class="container-fluid w-100">
+  <div class="row">
+    <div class="col-md-3 col-lg-2">
+      <div class="nav-side-menu ">
+        <div class="brand" style="font-size: medium;"><i class="fa fa-strikethrough"></i>ecure</div>
+        <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+      
+            <div class="menu-list">
+      
+              <ul id="menu-content" class="menu-content collapse out">
+
+                
+                
+                <li (click)="adminhome()" >
+                  <i class="fa fa fa-home fa-lg"></i> Home 
+                </li>
+                
+  
+                <li (click)="studentsoutpassfun()">
+                  <i class="fa fa fa-calendar fa-lg"></i> Students Outpass 
+                </li>
+                
+  
+  
+
+  
+  
+                <!--
+                <li data-toggle="collapse" data-target="#new" class="collapsed">
+                  <a href="#"><i class="fa fa-car fa-lg"></i> New <span class="arrow"></span></a>
+                </li>
+                <ul class="sub-menu collapse" id="new">
+                  <li>New New 1</li>
+                  <li>New New 2</li>
+                  <li>New New 3</li>
+                </ul>
+                -->
+
+  
+                 <li (click)="logout()">
+                  
+                  <i class="fa fa-sign-out fa-lg"></i> Logout
+                  
+                </li>
+            </ul>
+         </div>
+      </div>
+    </div>
+    <div class="col-md-1 col-lg-1">
+      
+    </div> 
+    <div class="col-md-8 col-lg-8">
+      <div class="row ">
+        <div class="col-md-11 col-lg-11 p-2 logo w-100  ">
+         <div class="jumbotron" style="background-color: transparent;">
+           <img class="w-100" src="../../assets/images/logo10.png">
+         </div>
+        </div>
+      </div>
+      <router-outlet></router-outlet>
+    </div> 
+  </div>
+</div>
+
+
+
+
+

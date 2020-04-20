@@ -1,0 +1,131 @@
+<div class="container">
+    <hr>
+    <div class="row">
+        <div class="col-12">
+
+            <ngx-spinner
+            bdOpacity = 0.9
+            bdColor = "white"
+            size = "medium"
+            color = "#5d4d4d"
+            type = "ball-clip-rotate"
+            [fullScreen] = "false"
+            >
+            <p style="color: white" > Loading... </p>
+            </ngx-spinner>
+            
+            <div class="card" style="border: none;">
+
+                <div class="card-body">
+                    <div class="card-title mb-4">
+                        <br>
+                        <div class="d-flex justify-content-start">
+                                        <div class="userData ml-3">
+                                            <h2 class="d-block" style="font-size: 1.5rem; font-weight: bold">{{studentname}}</h2>
+                                            <h5 class="d-block">{{year}}</h5>
+                                            <h5 class="d-block">{{branch}}</h5>
+                                        </div>
+                            <div class="ml-auto">
+                                <input type="button" class="btn btn-primary d-none" id="btnDiscard" value="Discard Changes" />
+                            </div>
+                        </div>
+                    </div>
+                        <br>
+                    <div class="row">
+                        <div class="col-12">
+                            <ul class="nav nav-tabs mb-4" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="basicInfo-tab" data-toggle="tab" href="#basicInfo" role="tab" aria-controls="basicInfo" aria-selected="true">Basic Info</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="connectedServices-tab" data-toggle="tab" href="#accountsettings" role="tab" aria-controls="connectedServices" aria-selected="false">Change password</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content ml-1" id="myTabContent">
+                                <div class="tab-pane fade show active" id="basicInfo" role="tabpanel" aria-labelledby="basicInfo-tab">
+                                    
+
+                                    <div class="row">
+                                        <div class="col-sm-3 col-md-2 col-5">
+                                            <label style="font-weight:bold;">Name</label>
+                                        </div>
+                                        <div class="col-md-8 col-6">
+                                            <p style="font-weight: 500; color: blue; opacity: 0.9">{{studentname}}</p>
+                                        </div>
+                                    </div>
+                                    <hr />
+
+                                    <div class="row">
+                                        <div class="col-sm-3 col-md-2 col-5">
+                                            <label style="font-weight:bold;">Guard</label>
+                                        </div>
+                                        <div class="col-md-8 col-6">
+                                            <p style="font-weight: 500;  color: blue; opacity: 0.9">{{guard}}</p>
+                                        </div>
+                                    </div>
+                                    <hr />
+                                    
+                                    
+                                    <div class="row">
+                                        <div class="col-sm-3 col-md-2 col-5">
+                                            <label style="font-weight:bold;">Student Mobile no:</label>
+                                        </div>
+                                        <div class="col-md-8 col-6">
+                                            <p style="font-weight: 500;  color: blue; opacity: 0.9">{{studentmobileno}}</p>
+                                        </div>
+                                    </div>
+                                    <hr />
+                                    <div class="row">
+                                        <div class="col-sm-3 col-md-2 col-5">
+                                            <label style="font-weight:bold;">Parent Mobile no:</label>
+                                        </div>
+                                        <div class="col-md-8 col-6">
+                                            <p style="font-weight: 500;  color: blue; opacity: 0.9">{{parentmobileno}}</p>
+                                        </div>
+                                    </div>
+                                    <hr />
+
+                                </div>
+                                <div class="tab-pane fade" id="accountsettings" role="tabpanel" aria-labelledby="ConnectedServices-tab">
+                                    <div class="row justify-content-center">
+                                        <div class="noti-messg"  style="text-align: center; color: red;">
+                                            <span *ngIf="error === true"><p style="font-weight: 500;"> {{message1}}</p></span>
+                                        </div>
+                                        <form id="update" ngNativeValidate #ref="ngForm" (ngSubmit)="updatePassword(ref.value);">
+                                            <label class="pt-2" for="currentpsd"><strong>Current Password</strong></label>
+                                            <input id = "currentpsd"  type="password" required="" placeholder="Current password"  value="" name="currentpassword" ngModel class="txt">
+
+                                            <label class="pt-2" for="newpsd" for="currentpsd"><strong>New Password</strong></label>
+                                            <input id = "newpsd" type="password" required=""  placeholder="New password" name="newpassword" ngModel class="txt">
+
+                                            <label class="pt-2" for="conformpsd"><strong>Conform Password</strong></label>
+                                            <input id = "conformpsd"  type="password" required=""  placeholder="Conform new password" name="conformnewpassword" ngModel class="txt">
+               
+                                            <input type="submit" value="submit" name="submit" class="txt2">
+                                
+                                        </form>
+                                    </div>
+                                    <hr />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+ 
+</div>
+
+
+
+
+
+
+
+
+
+

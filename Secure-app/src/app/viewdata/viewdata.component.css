@@ -1,0 +1,15 @@
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border-top: 1px solid #ddd;
+  }
+  
+  th, td {
+    text-align: center;
+    padding: 8px;
+  }
+  td{
+    font-style: inherit;
+    font-weight: 500;
+  }
