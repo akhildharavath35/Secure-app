@@ -1,6 +1,12 @@
 # Secure1App
 
 Project-Url:"http://secure1-app.herokuapp.com/"
+--------------------------------------------------
+            Username : 17071A0578
+            password : akhil
+            AdminUsername : admin
+            AdminPassword : akhil
+--------------------------------------------------
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.7.
 
